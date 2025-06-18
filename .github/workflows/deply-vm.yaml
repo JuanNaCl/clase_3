@@ -15,4 +15,4 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
       - name: Connect ssh
-        run: ssh azureuser@128.85.34.22 touch hola.txt
+        run: ssh -o StrictHostKeyChecking=no azureuser@128.85.34.22 touch hola.txt
