@@ -1,6 +1,6 @@
 BRANCH=$1
 
-if [ "$BRANCH" == "main"]; then
+if [ "$BRANCH" == "main" ]; then
     DEPLOY_PATH = "/home/azureuser/clase_3"
 else
     DEPLOY_PATH = "/home/azureuser/stage"
