@@ -1,0 +1,18 @@
+name: Deploy
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: setup SHH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+      - name: Connect ssh
+        run: ssh azureuser@128.85.34.22 touch hola.txt
