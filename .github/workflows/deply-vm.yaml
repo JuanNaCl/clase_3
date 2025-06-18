@@ -16,7 +16,7 @@ jobs:
           ssh-private-key: ${{secrets.SSH_KEY}}
   
       - name: Connect ssh
-        run: ssh -o StrictHostKeyChecking=no azureuser@128.85.34.22 touch hola.txt
+        run: ssh -o StrictHostKeyChecking=no azureuser@128.85.34.22
 
       - name: deploy to server
         run: bash deploy.sh
