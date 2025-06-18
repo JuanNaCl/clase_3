@@ -27,6 +27,7 @@ jobs:
       - name: Azure Static Web Apps Deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
+        ##Es importante configuirar/ levantar el static web app y configuirar la key en githun, actualmente queda todo desactivado
           azure_static_web_apps_api_token: ${{secrets.AZURE_TOKEN}}
           app_location: "public"
           deployment_action: "upload"

@@ -17,6 +17,7 @@ jobs:
       
       - name: setup SHH
         uses: webfactory/ssh-agent@v0.9.0
+        ##Es importante configuirar/ levantar la vm y configuirar la key en githun, actualmente queda todo desactivado
         with:
           ssh-private-key: ${{secrets.SSH_KEY}}
 
