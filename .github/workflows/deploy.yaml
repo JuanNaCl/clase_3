@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-
+      
       - name: Instalar dependencias
         run: npm install
 
@@ -23,3 +23,10 @@ jobs:
       
       - name: Build page
         run: npm run build
+      
+      - name: Azure Static Web Apps Deploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{secrets.AZURE_TOKEN}}
+          app_location: "public"
+          deployment_action: "upload"
