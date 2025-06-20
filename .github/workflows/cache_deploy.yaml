@@ -1,6 +1,6 @@
-name: Deploy
+name: Deploy cache
 
-on: workflow_dispatch
+on: push
 
 jobs:
   build:
