@@ -30,7 +30,17 @@ jobs:
       - name: Run test
         run: npm run test
       - name: HOla
-        run:  echo "hola prueba " >>$GITHUB_STEP_SUMMARY
+        run:  echo "hola prueba asdfdas" >>$GITHUB_STEP_SUMMARY
       - name: Build page
         run: npm run build
-      
+#Esto es para ver mas informacion durantte los logs
+
+#       ACTIONS_RUNNER_DEBUG
+	
+# true
+	
+# Jun 19, 2025
+	
+# ACTIONS_STEP_DEBUG
+	
+# true
