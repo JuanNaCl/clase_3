@@ -1,7 +1,7 @@
 name: Deploy cache
 
 on: push
-concurreny:
+concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
@@ -34,7 +34,7 @@ jobs:
       - name: Run test
         run: npm run test
       - name: HOla
-        run:  echo "hola prueba no concurrencia asdaddsad" >>$GITHUB_STEP_SUMMARY
+        run:  echo "hola prueba no concurrencia" >>$GITHUB_STEP_SUMMARY
       - name: Build page
         run: npm run build
 #Esto es para ver mas informacion durantte los logs
