@@ -1,1 +1,2 @@
 [![Deploy cache](https://github.com/JuanNaCl/clase_3/actions/workflows/cache_deploy.yaml/badge.svg?event=page_build)](https://github.com/JuanNaCl/clase_3/actions/workflows/cache_deploy.yaml)
+[![Deploy cache](https://github.com/JuanNaCl/clase_3/actions/workflows/cache_deploy.yaml/badge.svg)](https://github.com/JuanNaCl/clase_3/actions/workflows/cache_deploy.yaml)
