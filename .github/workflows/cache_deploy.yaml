@@ -1,11 +1,15 @@
 name: Deploy cache
 
 on: push
+concurreny:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    #Los jobs y workflows pueden cancelarse y  definirse aa nivel  job, step o  workflow
+    #https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/control-the-concurrency-of-workflows-and-jobshttps://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/control-the-concurrency-of-workflows-and-jobs
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,7 +34,7 @@ jobs:
       - name: Run test
         run: npm run test
       - name: HOla
-        run:  echo "hola prueba no concurrencia" >>$GITHUB_STEP_SUMMARY
+        run:  echo "hola prueba no concurrencia no solucionado" >>$GITHUB_STEP_SUMMARY
       - name: Build page
         run: npm run build
 #Esto es para ver mas informacion durantte los logs
